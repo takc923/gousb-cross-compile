@@ -1,4 +1,4 @@
-FROM golang:1.19.3
+FROM golang:1.19.3-bullseye
 
 RUN dpkg --add-architecture armhf
 RUN apt-get update
