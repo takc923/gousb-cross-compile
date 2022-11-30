@@ -13,7 +13,6 @@ ENV CC arm-linux-gnueabihf-gcc
 ARG REPO_DIR=/app
 WORKDIR $REPO_DIR
 
-ADD go.mod go.sum $REPO_DIR
+ADD go.mod go.sum main.go $REPO_DIR
 RUN go mod download
-ADD https://raw.githubusercontent.com/google/gousb/v1.1.2/lsusb/main.go $REPO_DIR
 RUN go build -o lsusb
